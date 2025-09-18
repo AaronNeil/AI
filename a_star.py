@@ -1,7 +1,6 @@
-    import heapq
+import heapq
 
 def heuristic(a, b):
-    # Manhattan distance
     return abs(a[0] - b[0]) + abs(a[1] - b[1])
 
 def astar(maze, start, goal):
@@ -9,6 +8,7 @@ def astar(maze, start, goal):
     open_set = []
     heapq.heappush(open_set, (0 + heuristic(start, goal), 0, start, [start]))
     visited = set()
+    num = 0
 
     while open_set:
         _, cost, current, path = heapq.heappop(open_set)
@@ -38,7 +38,6 @@ def print_maze_with_path(maze, path):
     for row in maze_copy:
         print(' '.join(str(cell) for cell in row))
 
-# Example usage
 maze = [
     [0, 1, 0, 0, 0, 1, 0, 0, 1, 0],
     [0, 1, 0, 1, 0, 1, 0, 1, 1, 0],
@@ -51,6 +50,7 @@ maze = [
     [0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
     [0, 1, 1, 1, 1, 1, 0, 0, 0, 0]
 ]
+
 start = (0, 0)
 goal = (9, 9)
 print("Initial Maze:")
