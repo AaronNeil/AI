@@ -1,7 +1,7 @@
 # Pokémon Type Prediction Based on Stats
 
 ## Overview
-This project builds a machine learning model that predicts the primary type of a Pokémon based on its stats such as HP, Attack, Defense, Special Attack, Special Defense, and Speed. The model is trained using Gradient Boosting (XGBoost) to achieve high accuracy and support complex feature interactions.
+This project builds a machine learning model that predicts the primary type of a Pokémon based on its stats such as HP, Attack, Defense, Special Attack, Special Defense, and Speed. The model is trained using the Random Forest algorithm and provide a simple CLI to predict Pokémon types by name.
 
 ## Features
 - Data preprocessing to clean and select relevant stats
@@ -21,7 +21,6 @@ Make sure to download and place the dataset at the correct path (`data/pokemon.c
 - Virtual environment
 - Required Python libraries:
   - pandas
-  - xgboost
   - scikit-learn
   - joblib
 
@@ -44,7 +43,7 @@ python src/train.py
 Use the predict.py script. Provide the Pokémon name and it will output the predicted type.
 
 ```bash
-python src/predict.py
+python src/predict.py <pokemon_name>
 ```
 
 
