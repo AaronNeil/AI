@@ -3,11 +3,17 @@
 ## Overview
 This project builds a machine learning model that predicts the primary type of a Pokémon based on its stats such as HP, Attack, Defense, Special Attack, Special Defense, and Speed. The model is trained using the Random Forest algorithm and provide a simple CLI to predict Pokémon types by name.
 
-## Features
-- Data preprocessing to clean and select relevant stats
-- Gradient Boosting classifier training and evaluation
-- Model persistence: trained model saved to disk for reuse
-- Command-line prediction tool: input a Pokémon name to get its predicted type based on stats
+## Project Structure
+```
+├── data/
+│ └── pokemon.csv
+├── models/ 
+├── src/
+│ ├── clean_data.py 
+│ ├── train.py 
+│ └── predict.py 
+
+```
 
 ## Dataset
 https://www.kaggle.com/datasets/rounakbanik/pokemon
